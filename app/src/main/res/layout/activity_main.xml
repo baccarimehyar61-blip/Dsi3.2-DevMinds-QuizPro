@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#E0F7FA"
-    android:padding="20dp">
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:paddingTop="64dp">
+
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -13,6 +14,7 @@
         android:layout_height="100dp"
         android:src="@drawable/logo_winshot"
         android:layout_marginBottom="20dp"/>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,16 +26,25 @@
         android:gravity="center"
         android:layout_marginBottom="10dp"/>
 
+    <!-- Description -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="QuizzPro est une plateforme de quiz pour tester
-les connaissances des équipes commerciales, consolider leurs
-acquis et suivre leur progression."
+        android:text="QuizzPro est une plateforme de quiz pour tester les connaissances des équipes commerciales, consolider leurs acquis et suivre leur progression."
         android:textSize="14sp"
         android:textColor="#546E7A"
         android:gravity="center"
         android:layout_marginBottom="30dp"/>
+
+
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"/>
 
 
     <Button
