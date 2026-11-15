@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#EEF9FC"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="108dp"
-        android:layout_weight="1"
-        android:text="Button" />
+        android:layout_height="wrap_content"
+        android:text="QuizzPro"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#0B4F6C"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue dans votre espace"
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/btnFormateur"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Espace Formateur"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnCommercial"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Espace Commercial"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Espace Admin"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
 </LinearLayout>
