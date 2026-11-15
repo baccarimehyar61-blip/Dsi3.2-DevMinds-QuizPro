@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">QuizPro</string>
+
+    <!-- Accueil -->
+    <string name="btn_ouvrir_inscription">Créer un compte</string>
+
+    <!-- Inscription -->
+    <string name="logo">Logo Winshot</string>
+    <string name="titre_inscription">Inscription</string>
+    <string name="hint_nom">Nom</string>
+    <string name="hint_prenom">Prénom</string>
+    <string name="hint_email">Adresse email</string>
+    <string name="hint_telephone">Téléphone (8 chiffres)</string>
+    <string name="label_role">Je suis :</string>
+    <string name="role_commercial">Commercial</string>
+    <string name="role_formateur">Formateur</string>
+    <string name="hint_mot_de_passe">Mot de passe</string>
+    <string name="hint_confirmation">Confirmer le mot de passe</string>
+    <string name="btn_inscrire">S\'inscrire</string>
+    <string name="btn_annuler">Annuler</string>
 </resources>

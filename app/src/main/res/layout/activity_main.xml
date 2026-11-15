@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
@@ -14,4 +15,50 @@ android:paddingTop="64dp">
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Connexion" />
+
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_winshot"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formez et évaluez vos commerciaux"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#0D47A1"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuizzPro est une plateforme de quiz pour tester
+les connaissances des équipes commerciales, consolider leurs
+acquis et suivre leur progression."
+        android:textSize="14sp"
+        android:textColor="#546E7A"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+
+    <Button
+        android:id="@+id/btnOuvrirInscription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inscription"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    
+
+
 </LinearLayout>
