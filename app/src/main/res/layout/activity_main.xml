@@ -47,7 +47,4 @@ acquis et suivre leur progression."
         android:padding="12dp"
         android:layout_marginBottom="10dp"/>
 
-
-
-
 </LinearLayout>
