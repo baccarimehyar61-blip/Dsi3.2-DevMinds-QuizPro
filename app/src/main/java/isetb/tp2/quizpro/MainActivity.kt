@@ -10,8 +10,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.btnOuvrirInscription).setOnClickListener {
-            startActivity(Intent(this, InscriptionActivity::class.java))
+
+        val btnConnexion = findViewById<Button>(R.id.btnConnexion)
+
+        btnConnexion.setOnClickListener {
+            val intent = (Intent(this, LoginActivity::class.java))
+            startActivity(intent)
+            findViewById<Button>(R.id.btnOuvrirInscription).setOnClickListener {
+                startActivity(Intent(this, InscriptionActivity::class.java))
+
+            }
         }
     }
 }
