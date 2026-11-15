@@ -21,5 +21,20 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+        val btnShowCategories = findViewById<Button>(R.id.btnShowCategories)
+        btnShowCategories.setOnClickListener {
+            startActivity(Intent(this, CategoryActivity::class.java))
+         }
+        val btnAddCategories = findViewById<Button>(R.id.btnAddCategories)
+        btnAddCategories.setOnClickListener {
+            startActivity(Intent(this, AddCategoryActivity::class.java))
+        }
+
+
+
+
+
+
+
     }
 }

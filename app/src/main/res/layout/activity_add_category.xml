@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter une Catégorie (Formateur)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom de la catégorie"
+        android:inputType="text"
+        android:padding="14dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_marginBottom="16dp" />
+
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Description de la catégorie"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_marginBottom="24dp" />
+
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Ajouter la catégorie"
+        android:backgroundTint="#6200EE"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>

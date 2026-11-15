@@ -58,7 +58,27 @@ acquis et suivre leur progression."
         android:layout_marginBottom="10dp"/>
 
 
-    
+    <Button
+        android:id="@+id/btnShowCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/bleu_winshot"
+        android:padding="12dp"
+        android:text="liste de categories"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
+
+    <Button
+        android:id="@+id/btnAddCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/purple_700"
+        android:padding="12dp"
+        android:text="ajoute categories"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
 </LinearLayout>
