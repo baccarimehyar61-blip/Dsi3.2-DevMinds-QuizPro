@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizPro">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,7 +18,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InscriptionActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".commercial.CommercialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".formateur.FormateurActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

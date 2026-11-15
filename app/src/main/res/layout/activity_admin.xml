@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#EEF9FC"
+    tools:context=".admin.AdminActivity">
+
+    <TextView
+        android:id="@+id/tvAdminTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Espace Administrateur"
+        android:textSize="24sp"
+        android:textColor="#0B4F6C"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tableau de bord de gestion et administration QuizzPro"
+        android:textSize="14sp"
+        android:textColor="#546E7A"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnGererQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Superviser les Quiz"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF9800"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnRetourAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Retour à l'accueil"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0B4F6C"
+        android:textSize="15sp" />
+
+</LinearLayout>

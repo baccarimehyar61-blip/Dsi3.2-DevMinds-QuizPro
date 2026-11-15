@@ -1,5 +1,6 @@
 package isetb.tp2.quizpro
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -7,6 +8,8 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import isetb.tp2.quizpro.commercial.CommercialActivity
+import isetb.tp2.quizpro.formateur.FormateurActivity
 
 class InscriptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,15 +46,19 @@ class InscriptionActivity : AppCompatActivity() {
             } else if (motDePasse != confirmation) {
                 Toast.makeText(this, "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show()
             } else {
-                var role = "Commercial"
-                if (rbFormateur.isChecked) {
-                    role = "Formateur"
-                }
+                val isFormateur = rbFormateur.isChecked
+                val role = if (isFormateur) "Formateur" else "Commercial"
 
                 AlertDialog.Builder(this)
                     .setTitle("Inscription réussie")
                     .setMessage("Bienvenue $prenom $nom !\nRôle : $role\nEmail : $email")
-                    .setPositiveButton("OK") { dialog, which ->
+                    .setPositiveButton("OK") { _, _ ->
+                        val intent = if (isFormateur) {
+                            Intent(this, FormateurActivity::class.java)
+                        } else {
+                            Intent(this, CommercialActivity::class.java)
+                        }
+                        startActivity(intent)
                         finish()
                     }
                     .show()
