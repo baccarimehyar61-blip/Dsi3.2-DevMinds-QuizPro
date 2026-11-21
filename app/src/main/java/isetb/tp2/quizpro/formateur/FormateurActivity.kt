@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import isetb.tp2.quizpro.Quiz
 import isetb.tp2.quizpro.R
+import android.content.Intent
 
 class FormateurActivity : AppCompatActivity() {
 
@@ -34,5 +35,11 @@ class FormateurActivity : AppCompatActivity() {
 
         val adapter = QuizAdapter(listeQuiz)
         recyclerViewQuiz.adapter = adapter
+
+        val btnAjouter = findViewById<Button>(R.id.btnAjouterQuiz)
+        btnAjouter.setOnClickListener {
+            val intent = Intent(this, CreateQuizActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

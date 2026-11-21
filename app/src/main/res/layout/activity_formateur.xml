@@ -52,6 +52,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewQuiz"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnAjouterQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="+ Créer un nouveau Quiz"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFF7A21B" />
 
 </LinearLayout>

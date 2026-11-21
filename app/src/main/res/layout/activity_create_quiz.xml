@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5"
+    tools:context=".formateur.CreateQuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <ImageView
+            android:id="@+id/imgLogoCreateQuiz"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo_winshot" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:text="Nouveau Quiz"
+            android:textColor="@color/orange_winshot"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titre du Quiz *"
+            android:textStyle="bold"
+            android:textColor="#0B4F6C" />
+
+        <EditText
+            android:id="@+id/etTitreQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: Prospection et Closing"
+            android:inputType="textCapSentences"
+            android:layout_marginBottom="14dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type de Quiz *"
+            android:textStyle="bold"
+            android:textColor="#0B4F6C" />
+
+        <RadioGroup
+            android:id="@+id/rgTypeQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <RadioButton
+                android:id="@+id/rbQCM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="QCM" />
+
+            <RadioButton
+                android:id="@+id/rbMixte"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mixte" />
+
+            <RadioButton
+                android:id="@+id/rbVraiFaux"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Vrai/Faux" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Durée (en minutes) *"
+            android:textStyle="bold"
+            android:textColor="#0B4F6C" />
+
+        <EditText
+            android:id="@+id/etDureeQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: 30"
+            android:inputType="number"
+            android:layout_marginBottom="14dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date limite (AAAA-MM-JJ) *"
+            android:textStyle="bold"
+            android:textColor="#0B4F6C" />
+
+        <EditText
+            android:id="@+id/etDateLimiteQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: 2026-12-31"
+            android:inputType="date"
+            android:layout_marginBottom="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnAnnulerQuiz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/bleu_winshot"
+                android:text="Annuler" />
+
+            <Button
+                android:id="@+id/btnValiderQuiz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/orange_winshot"
+                android:text="Créer" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
