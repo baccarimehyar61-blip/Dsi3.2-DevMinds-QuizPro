@@ -23,9 +23,11 @@ class LoginActivity : AppCompatActivity() {
 
             if (email.isEmpty()) {
                 Toast.makeText(this, "Entrez votre email", Toast.LENGTH_SHORT).show()
-            } else if (password.isEmpty()) {
+            }
+            else if (password.isEmpty()) {
                 Toast.makeText(this, "Entrez votre mot de passe", Toast.LENGTH_SHORT).show()
-            } else {
+            }
+            else {
                 Toast.makeText(this, "Saisie valide", Toast.LENGTH_SHORT).show()
             }
         }
