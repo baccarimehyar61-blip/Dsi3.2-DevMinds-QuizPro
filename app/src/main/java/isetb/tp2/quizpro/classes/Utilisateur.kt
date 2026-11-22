@@ -1,4 +1,4 @@
-package isetb.tp2.quizpro
+package isetb.tp2.quizpro.classes
 
 data class Utilisateur(
     val id: Int? = null,

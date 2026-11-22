@@ -1,4 +1,4 @@
-package isetb.tp2.quizpro
+package isetb.tp2.quizpro.classes
 
 data class Categorie(
     val idCat: Int? = null,
