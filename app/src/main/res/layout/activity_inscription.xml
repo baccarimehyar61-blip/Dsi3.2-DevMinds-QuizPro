@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".InscriptionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo_winshot" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/titre_inscription"
+            android:textColor="@color/orange_winshot"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Prenom"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Adresse email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Telephone(8 chiffres)"
+            android:inputType="phone"
+            android:maxLength="8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_role"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbCommercial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/role_commercial" />
+
+            <RadioButton
+                android:id="@+id/rbFormateur"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/role_formateur" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etMotDePasse"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_mot_de_passe"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/etConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_confirmation"
+            android:inputType="textPassword" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnAnnuler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/bleu_winshot"
+                android:text="@string/btn_annuler" />
+
+            <Button
+                android:id="@+id/btnInscrire"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/orange_winshot"
+                android:text="@string/btn_inscrire" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
