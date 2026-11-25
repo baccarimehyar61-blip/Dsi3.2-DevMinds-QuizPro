@@ -74,10 +74,10 @@ class DetaiQuizComActivity : AppCompatActivity() {
         }
     }
 
-    private fun QuizDetail(id: Int) {
+    private fun QuizDetail(quizId: Int) {
         btnCommencer.isEnabled = false
 
-        instance.getQuizBy(id).enqueue(object : Callback<Quiz> {
+        instance.getQuizBy(quizId).enqueue(object : Callback<Quiz> {
             override fun onResponse(call: Call<Quiz>, response: Response<Quiz>) {
                     val quiz = response.body()!!
                     QuizEnCour = quiz

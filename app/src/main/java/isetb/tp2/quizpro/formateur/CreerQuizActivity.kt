@@ -6,7 +6,6 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import isetb.tp2.quizpro.R
 import isetb.tp2.quizpro.classes.Quiz
-import isetb.tp2.quizpro.commercial.PassQuizActivity
 import isetb.tp2.quizpro.services.QuizService
 import retrofit2.Call
 import retrofit2.Callback
@@ -80,7 +79,7 @@ class CreerQuizActivity : AppCompatActivity() {
         }
         val btnValiderQuiz =findViewById<Button>(R.id.btnValiderQuiz)
         btnValiderQuiz.setOnClickListener{
-            startActivity(Intent(this, PassQuizActivity::class.java))
+            startActivity(Intent(this, ListQuestionActivity::class.java))
         }
 
     }

@@ -87,7 +87,7 @@ class FormateurActivity : AppCompatActivity() {
         })
     }
 
-    private fun supprimerQuiz(idQuiz : Long){
+    private fun supprimerQuiz(idQuiz : Int){
         instance.deleteQuiz(idQuiz).enqueue(object : Callback<Void>{
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 Toast.makeText(this@FormateurActivity, "Quiz supprimé", Toast.LENGTH_SHORT).show()
