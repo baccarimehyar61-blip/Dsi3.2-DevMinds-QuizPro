@@ -41,14 +41,14 @@ class DetailQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_quiz)
 
-        tvTitre = findViewById(R.id.tvDetailTitre)
-        tvDescription = findViewById(R.id.tvDetailDescription)
-        tvObjectif = findViewById(R.id.tvDetailObjectif)
-        tvType = findViewById(R.id.tvDetailType)
-        tvDuree = findViewById(R.id.tvDetailDuree)
-        tvDateLimite = findViewById(R.id.tvDetailDateLimite)
-        tvTentatives = findViewById(R.id.tvDetailTentatives)
-        tvStatut = findViewById(R.id.tvDetailStatut)
+        tvTitre = findViewById(R.id.edtTitre)
+        tvDescription = findViewById(R.id.edtDesc)
+        tvObjectif = findViewById(R.id.edtObjct)
+        tvType = findViewById(R.id.edtType)
+        tvDuree = findViewById(R.id.edtDuree)
+        tvDateLimite = findViewById(R.id.edtLim)
+        tvTentatives = findViewById(R.id.edtNbT)
+        tvStatut = findViewById(R.id.edtStat)
 
         val btnRetour = findViewById<Button>(R.id.btnRetourDetail)
 
@@ -57,11 +57,12 @@ class DetailQuizActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val idQuiz = intent.getIntExtra("id", -1)
+        val idQuiz = intent.getLongExtra("id", -1L)
+        loadQuiz(idQuiz)
 
     }
 
-    private fun loadQuiz(idQuiz: Int) {
+    private fun loadQuiz(idQuiz: Long) {
         instance.getQuizBy(idQuiz).enqueue(object : Callback<Quiz>{
             override fun onResponse(call: Call<Quiz>, response: Response<Quiz>) {
                 val quiz = response.body()

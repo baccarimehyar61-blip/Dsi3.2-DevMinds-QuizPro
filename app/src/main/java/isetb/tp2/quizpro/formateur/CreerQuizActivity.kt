@@ -72,8 +72,8 @@ class CreerQuizActivity : AppCompatActivity() {
             }
 
             val selectedTypeId = rgType.checkedRadioButtonId
-            val radioButton = findViewById<RadioButton>(selectedTypeId)
-            val typeQuiz = radioButton?.text?.toString() ?: "QCM"
+            val rb = findViewById<RadioButton>(selectedTypeId)
+            val typeQuiz = rb?.text?.toString() ?: "QCM"
             val quiz = Quiz(titre = titre, description = description, objectif = objectif, duree = duree, dateLimite = dateLimite, dateCreation = null, nbrTentatives = 1, melangeQust = false, melangeRep = false, typeQuiz = typeQuiz, statut = "En_Attent", score = null)
             ajouterQuiz(quiz)
         }

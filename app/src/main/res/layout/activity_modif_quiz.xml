@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Modifier Quiz"
+            android:textColor="@color/orange_winshot"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titre du quiz"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:hint="Titre"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:hint="Description"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Objectif"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtObjct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type de quiz"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rdType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/edQcm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QCM" />
+
+            <RadioButton
+                android:id="@+id/rdMix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mix" />
+
+            <RadioButton
+                android:id="@+id/rdVF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vrai/Faux" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Durée (minutes)"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtDuree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:hint="Duree(miutes)"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date limite"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtLim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:hint="Date limite "
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de tentatives"
+            android:textColor="#0B4F6C"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtNbT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:hint="Nb Tentatives"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer"
+            android:backgroundTint="@color/bleu_winshot" />
+
+    </LinearLayout>
+</ScrollView>

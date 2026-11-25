@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
@@ -14,9 +14,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Titre du Quiz"
+            android:textColor="#0B4F6C"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="#0B4F6C" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textQuizDetails"
@@ -24,23 +24,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="QCM • 30 min • Limite: 2026-12-01"
-            android:textSize="13sp"
-            android:textColor="#757575" />
+            android:textColor="#757575"
+            android:textSize="13sp" />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textQuizStatut"
+    <Button
+        android:id="@+id/btnSupp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:text="Actif"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:textColor="#2E7D32" />
+        android:text="Supprimer"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnModif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modifier"
+        android:textSize="13sp" />
 
 
 </LinearLayout>
