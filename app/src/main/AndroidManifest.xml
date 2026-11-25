@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizPro">
         <activity
-            android:name=".AddQuestionActivity"
+            android:name=".commercial.PassQuizActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoryActivity"
+            android:name=".commercial.DetaiQuizComActivity"
             android:exported="false" />
         <activity
-            android:name=".AddCategoryActivity"
+            android:name=".commercial.ListQuizComActivity"
+            android:exported="false" />
+        <activity
+            android:name=".formateur.AddQuestionActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import isetb.tp2.quizpro.formateur.CreerQuizActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +23,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-val btnquestion =findViewById<Button>(R.id.btnquestion)
-        btnquestion.setOnClickListener{
-            startActivity(Intent(this, AddQuestionActivity::class.java))
+        val btncrerQuiz =findViewById<Button>(R.id.btncrerQuiz)
+        btncrerQuiz.setOnClickListener{
+            startActivity(Intent(this, CreerQuizActivity::class.java))
         }
-
-
 
 
 

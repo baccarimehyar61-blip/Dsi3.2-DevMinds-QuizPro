@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- Button Pause mel fou9 -->
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:text="Pause"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#FF9800"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Texte mta3 el question mel BD -->
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chargement de la question..."
+        android:textSize="16sp"
+        android:textColor="#111111"
+        android:background="#FFFFFF"
+        android:padding="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choisir une réponse "
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Les 4 choix mel BD (b id) -->
+    <RadioButton
+        android:id="@+id/rbChoice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choix 1"
+        android:textSize="15sp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioButton
+        android:id="@+id/rbChoice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choix 2"
+        android:textSize="15sp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioButton
+        android:id="@+id/rbChoice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choix 3"
+        android:textSize="15sp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <RadioButton
+        android:id="@+id/rbChoice4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choix 4"
+        android:textSize="15sp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnSaveQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Enregistrer"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Précédent w Passer ba7dha b3adhehom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPrecedent"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Précédent"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#2196F3"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnPasser"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Passer"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#757575"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

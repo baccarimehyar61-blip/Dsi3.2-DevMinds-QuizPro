@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".InscriptionActivity">
 
     <LinearLayout
@@ -16,8 +16,8 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo_winshot"
-            android:contentDescription="@string/logo" />
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo_winshot" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,29 +33,30 @@
         <EditText
             android:id="@+id/etNom"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_nom"
-            android:inputType="textPersonName" />
+            android:layout_height="48dp"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/etPrenom"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_prenom"
+            android:layout_height="48dp"
+            android:hint="Prenom"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_email"
+            android:layout_height="48dp"
+            android:hint="Adresse email"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/etTelephone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_telephone"
+            android:layout_height="48dp"
+            android:hint="Telephone(8 chiffres)"
             android:inputType="phone"
             android:maxLength="8" />
 
@@ -91,14 +92,14 @@
         <EditText
             android:id="@+id/etMotDePasse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="@string/hint_mot_de_passe"
             android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/etConfirmation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="@string/hint_confirmation"
             android:inputType="textPassword" />
 
@@ -113,8 +114,8 @@
                 android:id="@+id/btnAnnuler"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginEnd="8dp"
+                android:layout_weight="1"
                 android:backgroundTint="@color/bleu_winshot"
                 android:text="@string/btn_annuler" />
 
@@ -122,8 +123,8 @@
                 android:id="@+id/btnInscrire"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="8dp"
+                android:layout_weight="1"
                 android:backgroundTint="@color/orange_winshot"
                 android:text="@string/btn_inscrire" />
         </LinearLayout>

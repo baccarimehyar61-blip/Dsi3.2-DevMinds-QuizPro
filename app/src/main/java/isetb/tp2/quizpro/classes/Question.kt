@@ -1,10 +1,19 @@
-package isetb.tp2.quizpro
+package isetb.tp2.quizpro.classes
 
 data class Question(
+    val idQuest: Int? = null,
+    val typeQuest: String,
+    val contenu: String,
+    val image: String?,
+    val document: String?,
+    val reponceCorrect: String?,
+    val duree: String?
+)
+/*data class Question(
     val id: Int = 0,
     val questionText: String,
     val correctOptionIndex: Int
-)
+)*/
 data class ChoiceItem(
     val id: Int,
     val text: String
@@ -14,13 +23,4 @@ data class DbQuestion(
     val id: Int,
     val questionText: String,
     val choices: List<ChoiceItem>
-)/*
-data class Question1(
-    val id: Int,
-    val texteQuestion: String,
-    val reponseA: String,
-    val reponseB: String,
-    val reponseC: String,
-    val reponseD: String,
-    val bonneReponse: String
-)*/
+)
