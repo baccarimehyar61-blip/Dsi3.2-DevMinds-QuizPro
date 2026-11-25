@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textTitre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titre du Quiz"
+        android:textColor="#212121"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Description du quiz"
+        android:textColor="#424242"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textObjectif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Objectif : "
+        android:textColor="#212121"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textDuree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Durée : 0 min"
+        android:textColor="#212121"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textDateLimite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Date limite : "
+        android:textColor="#212121"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textNbrTentatives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tentatives autorisées : 0"
+        android:textColor="#212121"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnCommencer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Commencer" />
+
+</LinearLayout>

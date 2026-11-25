@@ -10,7 +10,7 @@ import isetb.tp2.quizpro.R
 class DetailQuizActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_quiz)
+        setContentView(R.layout.activity_detailqu)
 
         val titre = intent.getStringExtra("titre")
         val description = intent.getStringExtra("description")
