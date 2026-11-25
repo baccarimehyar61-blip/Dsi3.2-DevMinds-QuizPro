@@ -9,14 +9,14 @@ interface QuizService {
     fun getQuizs(): Call<List<Quiz>>
 
     @GET("quizs/{idQuiz}")
-    fun getQuizBy(@Path("idQuiz") idQuiz: Int): Call<Quiz>
+    fun getQuizBy(@Path("idQuiz") idQuiz: Long): Call<Quiz>
 
     @POST("quizs")
     fun addQuiz(@Body quiz: Quiz): Call<Quiz>
 
     @PUT("quizs/{idQuiz}")
-    fun updateQuiz(@Path("idQuiz") idQuiz: Int, @Body quizs: Quiz): Call<Void>
+    fun updateQuiz(@Path("idQuiz") idQuiz: Long, @Body quizs: Quiz): Call<Void>
 
-    @DELETE("quiz/{idQuiz}")
-    fun deleteQuiz(@Path("idQuiz") idQuiz: Int): Call<Void>
+    @DELETE("quizs/{idQuiz}")
+    fun deleteQuiz(@Path("idQuiz") idQuiz: Long): Call<Void>
 }

@@ -37,27 +37,41 @@ class FormateurActivity : AppCompatActivity() {
 
         val btnRetour = findViewById<Button?>(R.id.btnRetourFormateur)
         val btnAjout =findViewById<Button>(R.id.btnAjouterQuiz)
-
+        val btnModif = findViewById<Button>(R.id.btnModif)
         btnRetour.setOnClickListener{
-            val intent =Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val intentR =Intent(this, MainActivity::class.java)
+            startActivity(intentR)
         }
 
         btnAjout.setOnClickListener{
-            val intent =Intent(this, CreerQuizActivity::class.java)
-            startActivity(intent)
+            val intentA =Intent(this, CreerQuizActivity::class.java)
+            startActivity(intentA)
+        }
+
+        btnModif.setOnClickListener{
+            val intentM = Intent(this, ModifQuizActivity::class.java)
+            startActivity(intentM)
         }
 
         val recyclerViewQuiz = findViewById<RecyclerView>(R.id.recyclerViewQuiz)
         recyclerViewQuiz.layoutManager = LinearLayoutManager(this)
 
-        adapter = QuizFormAdapter(quizs) { idQuiz ->
+        adapter = QuizFormAdapter (quizs,{idQuiz ->
             val intent = Intent(this, DetailQuizActivity::class.java)
             intent.putExtra("id", idQuiz)
             startActivity(intent)
-        }
+        },
+            {idQuiz -> supprimerQuiz (idQuiz) },
+            {idQuiz, quiz ->
+                val intent =Intent(this, ModifQuizActivity::class.java)
+                intent.putExtra("id", idQuiz)
+                startActivity(intent)
+            }
+        )
+
         recyclerViewQuiz.adapter = adapter
         loadStudents()
+
     }
 
     private fun loadStudents(){
@@ -72,4 +86,22 @@ class FormateurActivity : AppCompatActivity() {
             }
         })
     }
+
+    private fun supprimerQuiz(idQuiz : Long){
+        instance.deleteQuiz(idQuiz).enqueue(object : Callback<Void>{
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                Toast.makeText(this@FormateurActivity, "Quiz supprimé", Toast.LENGTH_SHORT).show()
+                quizs.clear()
+                adapter.notifyDataSetChanged()
+                loadStudents()
+            }
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                Toast.makeText(getBaseContext(), t.message, Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+
+
+
 }

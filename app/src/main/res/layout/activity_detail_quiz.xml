@@ -29,7 +29,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailTitre"
+            android:id="@+id/edtTitre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -45,7 +45,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailDescription"
+            android:id="@+id/edtDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -60,7 +60,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailObjectif"
+            android:id="@+id/edtObjct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -75,7 +75,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailType"
+            android:id="@+id/edtType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -90,7 +90,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailDuree"
+            android:id="@+id/edtDuree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -105,7 +105,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailDateLimite"
+            android:id="@+id/edtLim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -120,7 +120,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailTentatives"
+            android:id="@+id/edtNbT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -135,7 +135,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvDetailStatut"
+            android:id="@+id/edtStat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
