@@ -79,7 +79,7 @@ class CreerQuizActivity : AppCompatActivity() {
         }
         val btnValiderQuiz =findViewById<Button>(R.id.btnValiderQuiz)
         btnValiderQuiz.setOnClickListener{
-            startActivity(Intent(this, ListQuestionActivity::class.java))
+            startActivity(Intent(this, DetailQuizActivity::class.java))
         }
 
     }
