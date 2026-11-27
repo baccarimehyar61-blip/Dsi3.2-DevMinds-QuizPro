@@ -39,14 +39,14 @@ class DetaiQuizComActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detai_quiz_com)
+        setContentView(R.layout.activity_detail_quiz)
 
-        tvTitre = findViewById(R.id.Titre)
-        tvDescription = findViewById(R.id.Description)
-        tvObjectif = findViewById(R.id.Objectif)
-        tvDuree = findViewById(R.id.Duree)
-        tvNbrTentatives = findViewById(R.id.Tentatives)
-        tvTypeStatut = findViewById(R.id.Type)
+        tvTitre = findViewById(R.id.edtTitre)
+        tvDescription = findViewById(R.id.edtDesc)
+        tvObjectif = findViewById(R.id.edtObjct)
+        tvDuree = findViewById(R.id.edtDuree)
+        tvNbrTentatives = findViewById(R.id.edtNbT)
+        tvTypeStatut = findViewById(R.id.edtType)
         btnCommencer = findViewById(R.id.btnCom)
 
         quizId = intent.getIntExtra("idQuiz", -1)

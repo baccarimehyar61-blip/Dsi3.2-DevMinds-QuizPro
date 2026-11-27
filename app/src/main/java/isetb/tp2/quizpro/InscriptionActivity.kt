@@ -7,8 +7,26 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import isetb.tp2.quizpro.classes.Utilisateur
+import isetb.tp2.quizpro.services.utilisateur
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class InscriptionActivity : AppCompatActivity() {
+
+    private val BASE_URL = "http://10.0.2.2:3000/"
+
+    private val instance: utilisateur by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(utilisateur::class.java)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inscription)
@@ -32,7 +50,8 @@ class InscriptionActivity : AppCompatActivity() {
             val confirmation = etConfirmation.text.toString()
 
             if (nom.isEmpty() || prenom.isEmpty() || email.isEmpty() ||
-                telephone.isEmpty() || motDePasse.isEmpty() || confirmation.isEmpty()) {
+                telephone.isEmpty() || motDePasse.isEmpty() || confirmation.isEmpty()
+            ) {
                 Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show()
             } else if (!email.contains("@") || !email.contains(".")) {
                 Toast.makeText(this, "Adresse email invalide", Toast.LENGTH_SHORT).show()
@@ -43,18 +62,39 @@ class InscriptionActivity : AppCompatActivity() {
             } else if (motDePasse != confirmation) {
                 Toast.makeText(this, "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show()
             } else {
-                var role = "Commercial"
-                if (rbFormateur.isChecked) {
-                    role = "Formateur"
-                }
+                val role = if (rbFormateur.isChecked) "Formateur" else "Commercial"
 
-                AlertDialog.Builder(this)
-                    .setTitle("Inscription réussie")
-                    .setMessage("Bienvenue $prenom $nom !\nRôle : $role\nEmail : $email")
-                    .setPositiveButton("OK") { dialog, which ->
-                        finish()
+                val utilisateurObj = Utilisateur(
+                    nom = nom,
+                    prenom = prenom,
+                    email = email,
+                    motdepasse = motDePasse,
+                    role = role
+                )
+
+                instance.addUtilisateur(utilisateurObj).enqueue(object : Callback<Utilisateur> {
+                    override fun onResponse(call: Call<Utilisateur>, response: Response<Utilisateur>) {
+                        if (response.isSuccessful) {
+                            AlertDialog.Builder(this@InscriptionActivity)
+                                .setTitle("Inscription réussie")
+                                .setMessage("Bienvenue $prenom $nom !\nRôle : $role\nEmail : $email")
+                                .setPositiveButton("OK") { _, _ ->
+                                    finish()
+                                }
+                                .show()
+                        } else {
+                            Toast.makeText(
+                                this@InscriptionActivity,
+                                "Erreur inscription (${response.code()})",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
-                    .show()
+
+                    override fun onFailure(call: Call<Utilisateur>, t: Throwable) {
+                        Toast.makeText(getBaseContext(), t.message, Toast.LENGTH_SHORT).show()
+                    }
+                })
             }
         }
 

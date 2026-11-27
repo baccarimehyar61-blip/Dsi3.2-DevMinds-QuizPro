@@ -51,18 +51,22 @@ class DetailQuizActivity : AppCompatActivity() {
         tvStatut = findViewById(R.id.edtStat)
 
         val btnRetour = findViewById<Button>(R.id.btnRetourDetail)
-
+        val btnCom = findViewById<Button>(R.id.btnCom)
         btnRetour.setOnClickListener {
             val intent = Intent(this, FormateurActivity::class.java)
             startActivity(intent)
         }
+        btnCom.setOnClickListener {
+            val intent = Intent(this, ListQuestionActivity::class.java)
+            startActivity(intent)
+        }
 
-        val idQuiz = intent.getLongExtra("id", -1L)
+        val idQuiz = intent.getIntExtra("id", -1)
         loadQuiz(idQuiz)
 
     }
 
-    private fun loadQuiz(idQuiz: Long) {
+    private fun loadQuiz(idQuiz: Int) {
         instance.getQuizBy(idQuiz).enqueue(object : Callback<Quiz>{
             override fun onResponse(call: Call<Quiz>, response: Response<Quiz>) {
                 val quiz = response.body()

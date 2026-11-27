@@ -143,6 +143,12 @@
             android:layout_marginBottom="25dp" />
 
         <Button
+            android:id="@+id/btnCom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Commencer"
+            android:backgroundTint="@color/bleu_winshot" />
+        <Button
             android:id="@+id/btnRetourDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

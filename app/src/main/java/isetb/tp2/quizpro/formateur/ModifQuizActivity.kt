@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import isetb.tp2.quizpro.R
+import isetb.tp2.quizpro.adapters.QuizFormAdapter
 import isetb.tp2.quizpro.classes.Quiz
 import isetb.tp2.quizpro.services.QuizService
 import retrofit2.Call
@@ -14,7 +15,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ModifQuizActivity : AppCompatActivity() {
     private val BASE_URL = "http://10.0.2.2:3000/"
-
     private val instance: QuizService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -23,7 +23,7 @@ class ModifQuizActivity : AppCompatActivity() {
             .create(QuizService::class.java)
     }
 
-    private var idQuiz = -1L
+    private var idQuiz = -1
     lateinit var edtTitre : EditText
     lateinit var edtDesc : EditText
     lateinit var edtObjct : EditText
@@ -39,7 +39,7 @@ class ModifQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modif_quiz)
 
-        idQuiz = intent.getLongExtra("id",-1L)
+        idQuiz = intent.getIntExtra("id", -1)
         edtTitre = findViewById<EditText>(R.id.edtTitre)
         edtDesc = findViewById<EditText>(R.id.edtDesc)
         edtObjct = findViewById<EditText>(R.id.edtObjct)
@@ -81,21 +81,44 @@ class ModifQuizActivity : AppCompatActivity() {
 
     private fun modifierQuiz(){
         val id = rdType.checkedRadioButtonId
-        val type = findViewById<RadioButton>(id).text.toString()
+        if (id == -1) {
+            Toast.makeText(this, "Choisir le type du Quiz", Toast.LENGTH_SHORT).show()
+            return
+        }
 
+        val type = findViewById<RadioButton>(id).text.toString()
         val quiz = Quiz(idQuiz = idQuiz, titre =edtTitre.text.toString(), description = edtDesc.text.toString(), objectif = edtObjct.text.toString(),
-            duree = edtDuree.text.toString().toInt(), dateLimite = edtLim.text.toString(), dateCreation = null, nbrTentatives = edtNbT.text.toString().toInt(),
+            duree = edtDuree.text.toString().toInt(),
+            dateLimite = edtLim.text.toString(), dateCreation = null, nbrTentatives = edtNbT.text.toString().toInt(),
             melangeQust= false, melangeRep = false, typeQuiz =type, statut = "En_Attent", score = 0f)
 
         instance.updateQuiz(idQuiz, quiz).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                Toast.makeText(this@ModifQuizActivity, "Etudiant modifié avec succès", Toast.LENGTH_SHORT).show()
+                if (response.isSuccessful) {
+
+                    Toast.makeText(this@ModifQuizActivity,
+                        "Quiz modifié avec succès",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    finish()
+
+                } else {
+
+                    Toast.makeText(
+                        this@ModifQuizActivity,
+                        "Erreur modification : ${response.code()}",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 Toast.makeText(getBaseContext(), t.message, Toast.LENGTH_SHORT).show()
             }
 
-        })
+        }
+        )
     }
 }
