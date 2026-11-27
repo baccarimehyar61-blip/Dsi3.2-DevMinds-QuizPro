@@ -1,12 +1,13 @@
 package isetb.tp2.quizpro.services
 
+import android.telecom.Call
 import isetb.tp2.quizpro.classes.Quiz
 import retrofit2.Call
 import retrofit2.http.*
 
 interface QuizService {
-    @GET("quizs")
-    fun getQuizs(): Call<List<Quiz>>
+    @Get("quizs")
+    fun getQuizs(): android.telecom.Call<List<Quiz>>
 
     @GET("quizs/{idQuiz}")
     fun getQuizBy(@Path("idQuiz") idQuiz: Int): Call<Quiz>
@@ -17,6 +18,6 @@ interface QuizService {
     @PUT("quizs/{idQuiz}")
     fun updateQuiz(@Path("idQuiz") idQuiz: Int, @Body quizs: Quiz): Call<Void>
 
-    @DELETE("quizs/{idQuiz}")
+    @delete("quizs/{idQuiz}")
     fun deleteQuiz(@Path("idQuiz") idQuiz: Int): Call<Void>
 }
