@@ -81,10 +81,15 @@ class ModifQuizActivity : AppCompatActivity() {
 
     private fun modifierQuiz(){
         val id = rdType.checkedRadioButtonId
-        val type = findViewById<RadioButton>(id).text.toString()
+        if (id == -1) {
+            Toast.makeText(this, "Choisir le type du Quiz", Toast.LENGTH_SHORT).show()
+            return
+        }
 
+        val type = findViewById<RadioButton>(id).text.toString()
         val quiz = Quiz(idQuiz = idQuiz, titre =edtTitre.text.toString(), description = edtDesc.text.toString(), objectif = edtObjct.text.toString(),
-            duree = edtDuree.text.toString().toInt(), dateLimite = edtLim.text.toString(), dateCreation = null, nbrTentatives = edtNbT.text.toString().toInt(),
+            duree = edtDuree.text.toString().toInt(),
+            dateLimite = edtLim.text.toString(), dateCreation = null, nbrTentatives = edtNbT.text.toString().toInt(),
             melangeQust= false, melangeRep = false, typeQuiz =type, statut = "En_Attent", score = 0f)
 
         instance.updateQuiz(idQuiz, quiz).enqueue(object : Callback<Void> {

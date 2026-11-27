@@ -29,16 +29,14 @@ class AjouterQuesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajouter_question)
         val idQuiz = intent.getIntExtra("idQuiz", -1)
-
+      //recuperation
         val etType = findViewById<EditText>(R.id.etTypeQuest)
         val etContenu = findViewById<EditText>(R.id.etContenu)
         val etReponse = findViewById<EditText>(R.id.etReponse)
         val etDuree = findViewById<EditText>(R.id.etDuree)
         val etImage = findViewById<EditText>(R.id.etImage)
         val etDocument = findViewById<EditText>(R.id.etDocument)
-
         val btnAjouter = findViewById<Button>(R.id.btnEnregistrerQues)
-
         btnAjouter.setOnClickListener {
             val type = etType.text.toString()
             val contenu = etContenu.text.toString()

@@ -27,6 +27,7 @@ class QuestionAdapter(
         val question = items[position]
         holder.tvQuestion.text = "Question ${position + 1} : $question"
         holder.tvChoices.text = ""
+
     }
 
     override fun getItemCount(): Int = items.size

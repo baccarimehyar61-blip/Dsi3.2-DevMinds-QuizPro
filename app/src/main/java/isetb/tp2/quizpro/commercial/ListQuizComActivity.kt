@@ -59,5 +59,5 @@ class ListQuizComActivity : AppCompatActivity() {
                 Toast.makeText(getBaseContext(), t.message, Toast.LENGTH_SHORT).show()
             }
         })
-    }
-}
+    }}
+
