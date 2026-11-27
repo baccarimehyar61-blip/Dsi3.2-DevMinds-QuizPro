@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import isetb.tp2.quizpro.classes.Utilisateur
 import isetb.tp2.quizpro.commercial.ListQuizComActivity
 import isetb.tp2.quizpro.formateur.CreerQuizActivity
+import isetb.tp2.quizpro.formateur.FormateurActivity
 import isetb.tp2.quizpro.services.utilisateur
 import retrofit2.Call
 import retrofit2.Callback
@@ -71,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
                                 val isFormateur = user.role.equals("Formateur", ignoreCase = true)
                                 val nextActivity = if (isFormateur) {
-                                    CreerQuizActivity::class.java
+                                    FormateurActivity::class.java
                                 } else {
                                     ListQuizComActivity::class.java
                                 }

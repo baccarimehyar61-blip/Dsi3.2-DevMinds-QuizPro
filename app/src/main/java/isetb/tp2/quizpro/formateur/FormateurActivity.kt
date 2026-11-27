@@ -38,21 +38,22 @@ class FormateurActivity : AppCompatActivity() {
 
         val btnRetour = findViewById<Button?>(R.id.btnRetourFormateur)
         val btnAjout = findViewById<Button>(R.id.btnAjouterQuiz)
-
+    /*    val btnModif = findViewById<Button>(R.id.btnModif)*/
 
         btnRetour?.setOnClickListener {
             val intentR = Intent(this, MainActivity::class.java)
             startActivity(intentR)
         }
 
-        /*btnAjout.setOnClickListener {
-            val intentA = Intent(this, CreerQuizActivity::class.java)
-            startActivity(intentA)
-        }*/
         btnAjout.setOnClickListener {
             val intent = (Intent(this, CreerQuizActivity::class.java))
             startActivity(intent)
         }
+
+      /*  btnModif.setOnClickListener {
+            val intent = (Intent(this, ModifQuizActivity::class.java))
+            startActivity(intent)
+        }*/
         val recyclerViewQuiz = findViewById<RecyclerView>(R.id.recyclerViewQuiz)
         recyclerViewQuiz.layoutManager = LinearLayoutManager(this)
 

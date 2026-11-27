@@ -77,24 +77,33 @@ class CreerQuizActivity : AppCompatActivity() {
             val quiz = Quiz(titre = titre, description = description, objectif = objectif, duree = duree, dateLimite = dateLimite, dateCreation = null, nbrTentatives = 1, melangeQust = false, melangeRep = false, typeQuiz = typeQuiz, statut = "En_Attent", score = null)
             ajouterQuiz(quiz)
         }
-        val btnValiderQuiz =findViewById<Button>(R.id.btnValiderQuiz)
+        /*val btnValiderQuiz =findViewById<Button>(R.id.btnValiderQuiz)
         btnValiderQuiz.setOnClickListener{
-            startActivity(Intent(this, DetailQuizActivity::class.java))
-        }
+            startActivity(Intent(this, ListQuestionActivity::class.java))
+        }*/
 
     }
-
-
 
 
     private fun ajouterQuiz(quiz :Quiz){
         instance.addQuiz(quiz).enqueue(object : Callback<Quiz>{
             override fun onResponse(call: Call<Quiz>, response: Response<Quiz>) {
-                Toast.makeText(this@CreerQuizActivity, "Quiz créé avec succès !", Toast.LENGTH_SHORT).show()
+                if (response.isSuccessful && response.body() != null) {
+
+                    Toast.makeText(this@CreerQuizActivity, "Quiz créé avec succès !", Toast.LENGTH_SHORT).show()
+
+                    val quizCree = response.body()!!
+                    val intent = Intent(this@CreerQuizActivity, ListQuestionActivity::class.java)
+                    intent.putExtra("idQuiz", quizCree.idQuiz)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(this@CreerQuizActivity, "Erreur lors de la création du Quiz : ${response.code()}", Toast.LENGTH_LONG).show()
+                }
             }
 
             override fun onFailure(call: Call<Quiz>, t: Throwable) {
-                Toast.makeText(getBaseContext(), t.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CreerQuizActivity, "Erreur : ${t.message}", Toast.LENGTH_LONG).show()
             }
         })
     }

@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val btnConnexion = findViewById<Button>(R.id.btnConnexion)
-        val btnFormateur = findViewById<Button>(R.id.btnFormateur)
-        val btnCommercial = findViewById<Button>(R.id.btnCommercial)
+       // val btnFormateur = findViewById<Button>(R.id.btnFormateur)
+        // val btnCommercial = findViewById<Button>(R.id.btnCommercial)
 
       val  btnOuvrirInscription=findViewById<Button>(R.id.btnOuvrirInscription)
         btnConnexion.setOnClickListener {
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnFormateur.setOnClickListener {
+       /* btnFormateur.setOnClickListener {
             val intent = (Intent(this, FormateurActivity::class.java))
             startActivity(intent)
         }
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+*/
 
 
 

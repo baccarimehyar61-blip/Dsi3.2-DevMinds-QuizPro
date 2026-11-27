@@ -7,7 +7,8 @@ data class Question(
     val image: String?,
     val document: String?,
     val reponceCorrect: String?,
-    val duree: String?
+    val duree: Int?,
+    val id_quiz: Int
 )
 /*data class Question(
     val id: Int = 0,
