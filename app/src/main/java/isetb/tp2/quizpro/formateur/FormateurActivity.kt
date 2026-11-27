@@ -35,8 +35,8 @@ class FormateurActivity : AppCompatActivity() {
        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_formateur)
 
-        val btnRetour = findViewById<Button?>(R.id.btnRetourFormateur)
-        val btnAjout =findViewById<Button>(R.id.btnAjouterQuiz)
+        val btnRetour = findViewById<Button?>(R.id.btnRetourQues)
+        val btnAjout =findViewById<Button>(R.id.btnAjouterQues)
         val btnModif = findViewById<Button>(R.id.btnModif)
         btnRetour.setOnClickListener{
             val intentR =Intent(this, MainActivity::class.java)
@@ -53,7 +53,7 @@ class FormateurActivity : AppCompatActivity() {
             startActivity(intentM)
         }
 
-        val recyclerViewQuiz = findViewById<RecyclerView>(R.id.recyclerViewQuiz)
+        val recyclerViewQuiz = findViewById<RecyclerView>(R.id.ListQues)
         recyclerViewQuiz.layoutManager = LinearLayoutManager(this)
 
         adapter = QuizFormAdapter (quizs,{idQuiz ->

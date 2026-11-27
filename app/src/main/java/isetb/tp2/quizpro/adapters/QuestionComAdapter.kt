@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import isetb.tp2.quizpro.R
 import isetb.tp2.quizpro.classes.DbQuestion
 
-class QuestionAdapter(
+class QuestionComAdapter(
     private val items: MutableList<DbQuestion>
-) : RecyclerView.Adapter<QuestionAdapter.QuestionViewHolder>() {
+) : RecyclerView.Adapter<QuestionComAdapter.QuestionViewHolder>() {
 
     class QuestionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvQuestion: TextView = itemView.findViewById(R.id.tvItemQuestion)

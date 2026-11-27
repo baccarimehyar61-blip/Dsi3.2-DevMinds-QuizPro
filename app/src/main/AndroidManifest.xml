@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizPro">
         <activity
+            android:name=".formateur.AjouterQuesActivity"
+            android:exported="false" />
+        <activity
             android:name=".formateur.ListQuestionActivity"
             android:exported="false" />
         <activity

@@ -1,27 +1,28 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:padding="12dp"
-    android:layout_marginBottom="8dp">
+    android:padding="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_question">
 
     <TextView
         android:id="@+id/tvItemQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Question"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#111111"
-        android:layout_marginBottom="6dp" />
+        android:textColor="#0B4F6C"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/tvItemChoices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choix"
+        android:text="Type : QCM | Durée : 30 secondes"
         android:textSize="13sp"
         android:textColor="#555555" />
 

@@ -23,7 +23,8 @@ class ModifQuizActivity : AppCompatActivity() {
             .create(QuizService::class.java)
     }
 
-    private var idQuiz = -1L
+
+    private var idQuiz = -1
     lateinit var edtTitre : EditText
     lateinit var edtDesc : EditText
     lateinit var edtObjct : EditText
@@ -39,7 +40,7 @@ class ModifQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modif_quiz)
 
-        idQuiz = intent.getLongExtra("id",-1L)
+        idQuiz = intent.getIntExtra("id",-1)
         edtTitre = findViewById<EditText>(R.id.edtTitre)
         edtDesc = findViewById<EditText>(R.id.edtDesc)
         edtObjct = findViewById<EditText>(R.id.edtObjct)

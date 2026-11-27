@@ -6,8 +6,8 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface QuestionService {
-    @GET("questions")
-    fun getquestion(): Call<List<Question>>
+    @GET("ques")
+    fun getquestions(): Call<List<Question>>
 
     @GET("ques/{idQues}")
     fun getQuesById(@Path("idQues") idQues: Int): Call<Question>
@@ -15,12 +15,12 @@ interface QuestionService {
     @GET("quizs/{idQuiz}/questions")
     fun getQuesByQuiz(@Path("idQuiz") idQuiz: Int): Call<List<Question>>
 
-    @POST("questions")
+    @POST("ques")
     fun addQuestion(@Body question: Question): Call<Question>
 
-    @PUT("questions/{id}")
-    fun updateQuestion(@Path("id") id: Int, @Body question: Question): Call<Question>
+    @PUT("ques/{idQues}")
+    fun updateQuestion(@Path("idQues") id: Int, @Body question: Question): Call<Question>
 
-    @DELETE("questions/{id}")
+    @DELETE("ques/{id}")
     fun deleteQuestion(@Path("id") id: Int): Call<Void>
 }

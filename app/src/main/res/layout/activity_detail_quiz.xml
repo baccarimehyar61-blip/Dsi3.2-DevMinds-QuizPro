@@ -149,5 +149,12 @@
             android:text="Retour"
             android:backgroundTint="@color/bleu_winshot" />
 
+        <Button
+            android:id="@+id/btnQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange_winshot"
+            android:text="Voir Questions" />
+
     </LinearLayout>
 </ScrollView>

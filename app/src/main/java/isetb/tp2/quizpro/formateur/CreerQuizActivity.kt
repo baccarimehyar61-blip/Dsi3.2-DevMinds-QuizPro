@@ -84,9 +84,6 @@ class CreerQuizActivity : AppCompatActivity() {
 
     }
 
-
-
-
     private fun ajouterQuiz(quiz :Quiz){
         instance.addQuiz(quiz).enqueue(object : Callback<Quiz>{
             override fun onResponse(call: Call<Quiz>, response: Response<Quiz>) {
