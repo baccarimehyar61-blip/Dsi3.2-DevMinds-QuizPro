@@ -94,6 +94,7 @@ class ModifQuestionActivity : AppCompatActivity() {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.isSuccessful) {
                     Toast.makeText(this@ModifQuestionActivity, "Question modifiée avec succès", Toast.LENGTH_SHORT).show()
+                    finish()
                 } else {
                     Toast.makeText(this@ModifQuestionActivity, "Erreur : ${response.code()}", Toast.LENGTH_SHORT).show()
                 }

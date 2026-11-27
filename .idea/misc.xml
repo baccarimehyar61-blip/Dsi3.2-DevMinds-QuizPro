@@ -15,6 +15,7 @@
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_detail_quiz.xml" value="0.2" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_formateur.xml" value="0.22" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_inscription.xml" value="0.2" />
+        <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_item_ques.xml" value="0.2" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_item_quiz.xml" value="0.25" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_list_question.xml" value="0.2" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_list_quiz_com.xml" value="0.2738944365192582" />
@@ -23,6 +24,7 @@
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_modif_quiz.xml" value="0.1" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_pass_quiz.xml" value="0.33" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_category.xml" value="0.1" />
+        <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_com_question.xml" value="0.2" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_question.xml" value="0.25" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_quiz_com_ctivity.xml" value="0.2" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/itemquizcom_ctivity.xml" value="0.2" />

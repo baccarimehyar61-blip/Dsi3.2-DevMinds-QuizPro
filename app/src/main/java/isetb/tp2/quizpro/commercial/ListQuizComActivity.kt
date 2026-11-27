@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import isetb.tp2.quizpro.R
 import isetb.tp2.quizpro.adapters.QuizFormAdapter
 import isetb.tp2.quizpro.classes.Quiz
-import isetb.tp2.quizpro.formateur.DetailQuizActivity
 import isetb.tp2.quizpro.services.QuizService
 import retrofit2.Call
 import retrofit2.Callback

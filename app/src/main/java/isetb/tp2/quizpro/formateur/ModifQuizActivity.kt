@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import isetb.tp2.quizpro.R
+import isetb.tp2.quizpro.adapters.QuizFormAdapter
 import isetb.tp2.quizpro.classes.Quiz
 import isetb.tp2.quizpro.services.QuizService
 import retrofit2.Call
@@ -14,7 +15,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ModifQuizActivity : AppCompatActivity() {
     private val BASE_URL = "http://10.0.2.2:3000/"
-
     private val instance: QuizService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -89,7 +89,24 @@ class ModifQuizActivity : AppCompatActivity() {
 
         instance.updateQuiz(idQuiz, quiz).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                Toast.makeText(this@ModifQuizActivity, "Etudiant modifié avec succès", Toast.LENGTH_SHORT).show()
+                if (response.isSuccessful) {
+
+                    Toast.makeText(this@ModifQuizActivity,
+                        "Quiz modifié avec succès",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    finish()
+
+                } else {
+
+                    Toast.makeText(
+                        this@ModifQuizActivity,
+                        "Erreur modification : ${response.code()}",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
