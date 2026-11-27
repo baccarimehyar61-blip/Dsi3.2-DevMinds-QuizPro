@@ -11,9 +11,9 @@ import isetb.tp2.quizpro.R
 import isetb.tp2.quizpro.classes.Quiz
 
 class QuizFormAdapter (private val quizList: List<Quiz>,
-                       private val onItemClick: (Long) -> Unit,
-                       private val onDeleteClick: (Long) -> Unit,
-                       private val onModifClick :(Long, Quiz) -> Unit
+                       private val onItemClick: (Int) -> Unit,
+                       private val onDeleteClick: (Int) -> Unit,
+                       private val onModifClick :(Int, Quiz) -> Unit
 ) : RecyclerView.Adapter<QuizFormAdapter.QuizViewHolder>(){
 
     class QuizViewHolder(view: View) : RecyclerView.ViewHolder(view) {

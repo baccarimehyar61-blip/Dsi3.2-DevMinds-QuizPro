@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
         <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_main.xml" value="0.12708333333333333" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/acrivity_add_category.xml" value="0.1" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_add_category.xml" value="0.1" />
@@ -21,22 +20,14 @@
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_pass_quiz.xml" value="0.33" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_category.xml" value="0.1" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_question.xml" value="0.25" />
+        <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_quiz_com_ctivity.xml" value="0.2" />
         <entry key="..\:/QuizAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/itemquizcom_ctivity.xml" value="0.2" />
-=======
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_creer_quiz.xml" value="0.4" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_detail_quiz.xml" value="0.25" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_formateur.xml" value="0.25" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_inscription.xml" value="0.264" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_item_quiz.xml" value="0.4" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_modif_quiz.xml" value="0.264" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/detail_quiz.xml" value="0.19791666666666666" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/formateur.xml" value="0.2" />
-        <entry key="..\:/ProjetMobile/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_quiz.xml" value="0.11707317073170732" />
->>>>>>> f336cc24845a31d9acdb68f261fc09b21361e773
+        <entry key="..\:/projet_d'integrationAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_add_question.xml" value="0.25" />
+        <entry key="..\:/projet_d'integrationAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_creer_quiz.xml" value="0.25" />
         <entry key="..\:/projet_d'integrationAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/projet_d'integrationAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/projet_d'integrationAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_question.xml" value="0.25" />
+        <entry key="..\:/projet_d'integrationAndroid/Dsi3.2-DevMinds-QuizPro/app/src/main/res/layout/item_quiz_com_ctivity.xml" value="0.25" />
       </map>
     </option>
   </component>

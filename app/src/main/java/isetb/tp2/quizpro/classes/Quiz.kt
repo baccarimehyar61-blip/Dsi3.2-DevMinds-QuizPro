@@ -1,7 +1,7 @@
 package isetb.tp2.quizpro.classes
 
 data class Quiz(
-    val idQuiz: Long? = null,
+    val idQuiz: Int? = null,
     val titre: String,
     val description: String,
     val objectif: String,

@@ -38,11 +38,11 @@ class ListQuizComActivity : AppCompatActivity() {
         val recyclerViewQuiz = findViewById<RecyclerView>(R.id.listQuiz)
         recyclerViewQuiz.layoutManager = LinearLayoutManager(this)
 
-        adapter = QuizFormAdapter(quizs) { idQuiz ->
+        adapter = QuizFormAdapter(quizs, { idQuiz ->
             val intent = Intent(this, DetaiQuizComActivity::class.java)
             intent.putExtra("idQuiz", idQuiz)
             startActivity(intent)
-        }
+        }, { idQuiz -> }, { idQuiz, quiz -> })
         recyclerViewQuiz.adapter = adapter
 
         loadQuizs()

@@ -2,6 +2,7 @@ package isetb.tp2.quizpro.formateur
 
 import android.content.Intent
 import android.os.Bundle
+import android.telecom.Call
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.security.auth.callback.Callback
 
 class FormateurActivity : AppCompatActivity() {
 
@@ -87,8 +89,9 @@ class FormateurActivity : AppCompatActivity() {
         })
     }
 
-    private fun supprimerQuiz(idQuiz : Long){
-        instance.deleteQuiz(idQuiz).enqueue(object : Callback<Void>{
+
+    private fun supprimerQuiz(idQuiz : Int){
+        instance.deleteQuiz(idQuiz).enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 Toast.makeText(this@FormateurActivity, "Quiz supprimé", Toast.LENGTH_SHORT).show()
                 quizs.clear()
